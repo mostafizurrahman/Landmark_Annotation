@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE5A8A5E1EEBBE25002E58F4 /* IPStaticDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5A8A5D1EEBBE25002E58F4 /* IPStaticDrawing.m */; };
+		BE8782B21EED09E3003B901A /* dlib in Resources */ = {isa = PBXBuildFile; fileRef = BE8782B11EED09E3003B901A /* dlib */; };
+		BE8782B41EED179A003B901A /* FDFaceMasking.dat in Resources */ = {isa = PBXBuildFile; fileRef = BE8782B31EED178D003B901A /* FDFaceMasking.dat */; };
+		BE97F3971EEBEDDD001E54E0 /* IPDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE97F3961EEBEDDD001E54E0 /* IPDrawingView.m */; };
+		BEB56F3E1EE7D4D100003B81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F3D1EE7D4D100003B81 /* AppDelegate.m */; };
+		BEB56F411EE7D4D100003B81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F401EE7D4D100003B81 /* main.m */; };
+		BEB56F441EE7D4D100003B81 /* IPLandmarkViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F431EE7D4D100003B81 /* IPLandmarkViewController.mm */; };
+		BEB56F461EE7D4D100003B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB56F451EE7D4D100003B81 /* Assets.xcassets */; };
+		BEB56F491EE7D4D100003B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB56F471EE7D4D100003B81 /* Main.storyboard */; };
+		BEB56F541EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F531EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.m */; };
+		BEB56F5F1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F5E1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.m */; };
+		BEB56F6F1EE7D5EA00003B81 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB56F6D1EE7D5EA00003B81 /* AppKit.framework */; };
+		BEB56F701EE7D5EA00003B81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB56F6E1EE7D5EA00003B81 /* CoreGraphics.framework */; };
+		BEB56F731EE7DB3A00003B81 /* IPNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F721EE7DB3A00003B81 /* IPNumberFormatter.m */; };
+		BEB56F761EE7DEFD00003B81 /* IPFaceRectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */; };
+		BEB56F7D1EE7E65500003B81 /* IPShapePredictor.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F7C1EE7E65500003B81 /* IPShapePredictor.mm */; };
+		BEDD9B971EE7F5BB006BB36D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDD9B961EE7F5BB006BB36D /* CoreFoundation.framework */; };
+		BEDD9B991EE7F97E006BB36D /* 26638112_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEDD9B981EE7F97E006BB36D /* 26638112_1.jpg */; };
+		BEF30E821EE7F10300472A72 /* IPFaceLandmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF30E811EE7F10300472A72 /* IPFaceLandmarks.m */; };
+		BEF30E851EE7F1C100472A72 /* IPFaceRect.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF30E841EE7F1C100472A72 /* IPFaceRect.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEB56F501EE7D4D100003B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEB56F311EE7D4D000003B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB56F381EE7D4D000003B81;
+			remoteInfo = IPFaceAnnotationTools_OSX;
+		};
+		BEB56F5B1EE7D4D100003B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEB56F311EE7D4D000003B81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEB56F381EE7D4D000003B81;
+			remoteInfo = IPFaceAnnotationTools_OSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE5A8A5C1EEBBE25002E58F4 /* IPStaticDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPStaticDrawing.h; path = Drawing/IPStaticDrawing.h; sourceTree = "<group>"; };
+		BE5A8A5D1EEBBE25002E58F4 /* IPStaticDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPStaticDrawing.m; path = Drawing/IPStaticDrawing.m; sourceTree = "<group>"; };
+		BE8782B11EED09E3003B901A /* dlib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dlib; path = lib/dlib; sourceTree = "<group>"; };
+		BE8782B31EED178D003B901A /* FDFaceMasking.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = FDFaceMasking.dat; sourceTree = "<group>"; };
+		BE97F3951EEBEDDD001E54E0 /* IPDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPDrawingView.h; path = Drawing/IPDrawingView.h; sourceTree = "<group>"; };
+		BE97F3961EEBEDDD001E54E0 /* IPDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPDrawingView.m; path = Drawing/IPDrawingView.m; sourceTree = "<group>"; };
+		BEB56F391EE7D4D100003B81 /* IPFaceAnnotationTools_OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFaceAnnotationTools_OSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB56F3C1EE7D4D100003B81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BEB56F3D1EE7D4D100003B81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BEB56F401EE7D4D100003B81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEB56F421EE7D4D100003B81 /* IPLandmarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPLandmarkViewController.h; sourceTree = "<group>"; };
+		BEB56F431EE7D4D100003B81 /* IPLandmarkViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IPLandmarkViewController.mm; sourceTree = "<group>"; };
+		BEB56F451EE7D4D100003B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEB56F481EE7D4D100003B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEB56F4A1EE7D4D100003B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB56F4F1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPFaceAnnotationTools_OSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB56F531EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPFaceAnnotationTools_OSXTests.m; sourceTree = "<group>"; };
+		BEB56F551EE7D4D100003B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB56F5A1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPFaceAnnotationTools_OSXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB56F5E1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPFaceAnnotationTools_OSXUITests.m; sourceTree = "<group>"; };
+		BEB56F601EE7D4D100003B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB56F6D1EE7D5EA00003B81 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BEB56F6E1EE7D5EA00003B81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BEB56F711EE7DB3A00003B81 /* IPNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPNumberFormatter.h; path = Formatter/IPNumberFormatter.h; sourceTree = "<group>"; };
+		BEB56F721EE7DB3A00003B81 /* IPNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPNumberFormatter.m; path = Formatter/IPNumberFormatter.m; sourceTree = "<group>"; };
+		BEB56F741EE7DEFD00003B81 /* IPFaceRectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPFaceRectImageView.h; path = Formatter/IPFaceRectImageView.h; sourceTree = "<group>"; };
+		BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPFaceRectImageView.m; path = Formatter/IPFaceRectImageView.m; sourceTree = "<group>"; };
+		BEB56F7B1EE7E65500003B81 /* IPShapePredictor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPShapePredictor.h; path = lib/IPShapePredictor.h; sourceTree = "<group>"; };
+		BEB56F7C1EE7E65500003B81 /* IPShapePredictor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IPShapePredictor.mm; path = lib/IPShapePredictor.mm; sourceTree = "<group>"; };
+		BEDD9B961EE7F5BB006BB36D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		BEDD9B981EE7F97E006BB36D /* 26638112_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 26638112_1.jpg; sourceTree = "<group>"; };
+		BEF30E801EE7F10300472A72 /* IPFaceLandmarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPFaceLandmarks.h; path = lib/IPFaceLandmarks.h; sourceTree = "<group>"; };
+		BEF30E811EE7F10300472A72 /* IPFaceLandmarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPFaceLandmarks.m; path = lib/IPFaceLandmarks.m; sourceTree = "<group>"; };
+		BEF30E831EE7F1C100472A72 /* IPFaceRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPFaceRect.h; path = lib/IPFaceRect.h; sourceTree = "<group>"; };
+		BEF30E841EE7F1C100472A72 /* IPFaceRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPFaceRect.m; path = lib/IPFaceRect.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEB56F361EE7D4D000003B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDD9B971EE7F5BB006BB36D /* CoreFoundation.framework in Frameworks */,
+				BEB56F6F1EE7D5EA00003B81 /* AppKit.framework in Frameworks */,
+				BEB56F701EE7D5EA00003B81 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F4C1EE7D4D100003B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F571EE7D4D100003B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEB56F301EE7D4D000003B81 = {
+			isa = PBXGroup;
+			children = (
+				BEB56F3B1EE7D4D100003B81 /* IPFaceAnnotationTools_OSX */,
+				BEB56F521EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests */,
+				BEB56F5D1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests */,
+				BEB56F3A1EE7D4D100003B81 /* Products */,
+				BEB56F6C1EE7D5EA00003B81 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEB56F3A1EE7D4D100003B81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEB56F391EE7D4D100003B81 /* IPFaceAnnotationTools_OSX.app */,
+				BEB56F4F1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.xctest */,
+				BEB56F5A1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEB56F3B1EE7D4D100003B81 /* IPFaceAnnotationTools_OSX */ = {
+			isa = PBXGroup;
+			children = (
+				BE8782B31EED178D003B901A /* FDFaceMasking.dat */,
+				BEDD9B981EE7F97E006BB36D /* 26638112_1.jpg */,
+				BE8782B11EED09E3003B901A /* dlib */,
+				BEB56F3C1EE7D4D100003B81 /* AppDelegate.h */,
+				BEB56F3D1EE7D4D100003B81 /* AppDelegate.m */,
+				BEB56F421EE7D4D100003B81 /* IPLandmarkViewController.h */,
+				BEB56F431EE7D4D100003B81 /* IPLandmarkViewController.mm */,
+				BEB56F451EE7D4D100003B81 /* Assets.xcassets */,
+				BEB56F471EE7D4D100003B81 /* Main.storyboard */,
+				BEB56F4A1EE7D4D100003B81 /* Info.plist */,
+				BEB56F3F1EE7D4D100003B81 /* Supporting Files */,
+			);
+			path = IPFaceAnnotationTools_OSX;
+			sourceTree = "<group>";
+		};
+		BEB56F3F1EE7D4D100003B81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEB56F401EE7D4D100003B81 /* main.m */,
+				BEB56F741EE7DEFD00003B81 /* IPFaceRectImageView.h */,
+				BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */,
+				BEB56F711EE7DB3A00003B81 /* IPNumberFormatter.h */,
+				BEB56F721EE7DB3A00003B81 /* IPNumberFormatter.m */,
+				BEB56F7B1EE7E65500003B81 /* IPShapePredictor.h */,
+				BEB56F7C1EE7E65500003B81 /* IPShapePredictor.mm */,
+				BEF30E801EE7F10300472A72 /* IPFaceLandmarks.h */,
+				BEF30E811EE7F10300472A72 /* IPFaceLandmarks.m */,
+				BEF30E831EE7F1C100472A72 /* IPFaceRect.h */,
+				BEF30E841EE7F1C100472A72 /* IPFaceRect.m */,
+				BE5A8A5C1EEBBE25002E58F4 /* IPStaticDrawing.h */,
+				BE5A8A5D1EEBBE25002E58F4 /* IPStaticDrawing.m */,
+				BE97F3951EEBEDDD001E54E0 /* IPDrawingView.h */,
+				BE97F3961EEBEDDD001E54E0 /* IPDrawingView.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEB56F521EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB56F531EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.m */,
+				BEB56F551EE7D4D100003B81 /* Info.plist */,
+			);
+			path = IPFaceAnnotationTools_OSXTests;
+			sourceTree = "<group>";
+		};
+		BEB56F5D1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEB56F5E1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.m */,
+				BEB56F601EE7D4D100003B81 /* Info.plist */,
+			);
+			path = IPFaceAnnotationTools_OSXUITests;
+			sourceTree = "<group>";
+		};
+		BEB56F6C1EE7D5EA00003B81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEDD9B961EE7F5BB006BB36D /* CoreFoundation.framework */,
+				BEB56F6D1EE7D5EA00003B81 /* AppKit.framework */,
+				BEB56F6E1EE7D5EA00003B81 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEB56F381EE7D4D000003B81 /* IPFaceAnnotationTools_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB56F631EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSX" */;
+			buildPhases = (
+				BEB56F351EE7D4D000003B81 /* Sources */,
+				BEB56F361EE7D4D000003B81 /* Frameworks */,
+				BEB56F371EE7D4D000003B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IPFaceAnnotationTools_OSX;
+			productName = IPFaceAnnotationTools_OSX;
+			productReference = BEB56F391EE7D4D100003B81 /* IPFaceAnnotationTools_OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEB56F4E1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB56F661EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSXTests" */;
+			buildPhases = (
+				BEB56F4B1EE7D4D100003B81 /* Sources */,
+				BEB56F4C1EE7D4D100003B81 /* Frameworks */,
+				BEB56F4D1EE7D4D100003B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB56F511EE7D4D100003B81 /* PBXTargetDependency */,
+			);
+			name = IPFaceAnnotationTools_OSXTests;
+			productName = IPFaceAnnotationTools_OSXTests;
+			productReference = BEB56F4F1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEB56F591EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEB56F691EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSXUITests" */;
+			buildPhases = (
+				BEB56F561EE7D4D100003B81 /* Sources */,
+				BEB56F571EE7D4D100003B81 /* Frameworks */,
+				BEB56F581EE7D4D100003B81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEB56F5C1EE7D4D100003B81 /* PBXTargetDependency */,
+			);
+			name = IPFaceAnnotationTools_OSXUITests;
+			productName = IPFaceAnnotationTools_OSXUITests;
+			productReference = BEB56F5A1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEB56F311EE7D4D000003B81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IP;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mostafizur Rahman";
+				TargetAttributes = {
+					BEB56F381EE7D4D000003B81 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2VZ7V842VP;
+						ProvisioningStyle = Automatic;
+					};
+					BEB56F4E1EE7D4D100003B81 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2VZ7V842VP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BEB56F381EE7D4D000003B81;
+					};
+					BEB56F591EE7D4D100003B81 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 2VZ7V842VP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BEB56F381EE7D4D000003B81;
+					};
+				};
+			};
+			buildConfigurationList = BEB56F341EE7D4D000003B81 /* Build configuration list for PBXProject "IPFaceAnnotationTools_OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEB56F301EE7D4D000003B81;
+			productRefGroup = BEB56F3A1EE7D4D100003B81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEB56F381EE7D4D000003B81 /* IPFaceAnnotationTools_OSX */,
+				BEB56F4E1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests */,
+				BEB56F591EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEB56F371EE7D4D000003B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8782B41EED179A003B901A /* FDFaceMasking.dat in Resources */,
+				BE8782B21EED09E3003B901A /* dlib in Resources */,
+				BEDD9B991EE7F97E006BB36D /* 26638112_1.jpg in Resources */,
+				BEB56F461EE7D4D100003B81 /* Assets.xcassets in Resources */,
+				BEB56F491EE7D4D100003B81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F4D1EE7D4D100003B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F581EE7D4D100003B81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEB56F351EE7D4D000003B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB56F731EE7DB3A00003B81 /* IPNumberFormatter.m in Sources */,
+				BE5A8A5E1EEBBE25002E58F4 /* IPStaticDrawing.m in Sources */,
+				BE97F3971EEBEDDD001E54E0 /* IPDrawingView.m in Sources */,
+				BEB56F7D1EE7E65500003B81 /* IPShapePredictor.mm in Sources */,
+				BEB56F441EE7D4D100003B81 /* IPLandmarkViewController.mm in Sources */,
+				BEF30E821EE7F10300472A72 /* IPFaceLandmarks.m in Sources */,
+				BEB56F411EE7D4D100003B81 /* main.m in Sources */,
+				BEF30E851EE7F1C100472A72 /* IPFaceRect.m in Sources */,
+				BEB56F3E1EE7D4D100003B81 /* AppDelegate.m in Sources */,
+				BEB56F761EE7DEFD00003B81 /* IPFaceRectImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F4B1EE7D4D100003B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB56F541EE7D4D100003B81 /* IPFaceAnnotationTools_OSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEB56F561EE7D4D100003B81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEB56F5F1EE7D4D100003B81 /* IPFaceAnnotationTools_OSXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEB56F511EE7D4D100003B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB56F381EE7D4D000003B81 /* IPFaceAnnotationTools_OSX */;
+			targetProxy = BEB56F501EE7D4D100003B81 /* PBXContainerItemProxy */;
+		};
+		BEB56F5C1EE7D4D100003B81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEB56F381EE7D4D000003B81 /* IPFaceAnnotationTools_OSX */;
+			targetProxy = BEB56F5B1EE7D4D100003B81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEB56F471EE7D4D100003B81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEB56F481EE7D4D100003B81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEB56F611EE7D4D100003B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BEB56F621EE7D4D100003B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BEB56F641EE7D4D100003B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BEB56F651EE7D4D100003B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BEB56F671EE7D4D100003B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IPFaceAnnotationTools_OSX.app/Contents/MacOS/IPFaceAnnotationTools_OSX";
+			};
+			name = Debug;
+		};
+		BEB56F681EE7D4D100003B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IPFaceAnnotationTools_OSX.app/Contents/MacOS/IPFaceAnnotationTools_OSX";
+			};
+			name = Release;
+		};
+		BEB56F6A1EE7D4D100003B81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IPFaceAnnotationTools_OSX;
+			};
+			name = Debug;
+		};
+		BEB56F6B1EE7D4D100003B81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2VZ7V842VP;
+				INFOPLIST_FILE = IPFaceAnnotationTools_OSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IPFaceAnnotationTools_OSX;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEB56F341EE7D4D000003B81 /* Build configuration list for PBXProject "IPFaceAnnotationTools_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB56F611EE7D4D100003B81 /* Debug */,
+				BEB56F621EE7D4D100003B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB56F631EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB56F641EE7D4D100003B81 /* Debug */,
+				BEB56F651EE7D4D100003B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB56F661EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB56F671EE7D4D100003B81 /* Debug */,
+				BEB56F681EE7D4D100003B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEB56F691EE7D4D100003B81 /* Build configuration list for PBXNativeTarget "IPFaceAnnotationTools_OSXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEB56F6A1EE7D4D100003B81 /* Debug */,
+				BEB56F6B1EE7D4D100003B81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEB56F311EE7D4D000003B81 /* Project object */;
+}
