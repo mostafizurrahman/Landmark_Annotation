@@ -11,6 +11,11 @@
 
 -(void)landmarkClickedAtPoint:(NSPoint)clickedPoint;
 
+-(void)moveUp;
+-(void)moveDown;
+-(void)moveLeft;
+-(void)moveRight;
+
 @end
 
 @interface IPDrawingView : IKImageView

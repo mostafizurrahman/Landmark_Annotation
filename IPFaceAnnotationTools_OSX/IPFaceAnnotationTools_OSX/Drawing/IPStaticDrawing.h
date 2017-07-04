@@ -11,7 +11,7 @@
 #import "IPFaceRect.h"
 
 @interface IPStaticDrawing : NSObject
-+(NSImage *)drawImage:(NSImage *)image inputFaceProperties:(IPFaceRect *)frect;
++(NSImage *)drawImage:(NSImage *)image inputFaceProperties:(IPFaceRect *)frect cv_predction:(BOOL)shouldInclude;
 +(NSImage *)getSaveImage:(NSImage *)image properties:(IPFaceRect *)frect;
 + (NSBitmapImageRep *)bitmapImageRepresentation:(NSImage *)src_image;
 @end

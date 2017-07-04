@@ -22,5 +22,7 @@
 @property (weak) IBOutlet NSTextField *rootDirectoryTextfield;
 @property (weak) IBOutlet NSButton *lockCenterCheckbox;
 
+@property (weak) IBOutlet NSTextField *opencvStatusLabel;
+
 @end
 

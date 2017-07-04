@@ -16,4 +16,10 @@
 @synthesize faceRect_Width;
 @synthesize faceRect_Height;
 @synthesize landmarkArray;
+
+@synthesize cv_fd_LandmarkArray;
+@synthesize cv_faceRect_OriginX;
+@synthesize cv_faceRect_OriginY;
+@synthesize cv_faceRect_Width;
+@synthesize cv_faceRect_Height;
 @end

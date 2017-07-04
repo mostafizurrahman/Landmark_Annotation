@@ -13,7 +13,7 @@
 @interface IPShapePredictor : NSObject
 -(instancetype)init;
 
--(NSMutableArray *)predictShape:(NSImage *)sourceImage withFaceRect:(IPFaceRect *)faceRect;
+-(NSMutableArray *)predictShape:(NSImage *)sourceImage withFaceRect:(IPFaceRect *)faceRect isCV_detection:(BOOL)is_cv_detection;
 
 -(void)freePreviousImage;
 

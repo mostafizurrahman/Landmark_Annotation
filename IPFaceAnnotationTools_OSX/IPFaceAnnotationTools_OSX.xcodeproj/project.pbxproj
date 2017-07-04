@@ -23,6 +23,7 @@
 		BEB56F731EE7DB3A00003B81 /* IPNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F721EE7DB3A00003B81 /* IPNumberFormatter.m */; };
 		BEB56F761EE7DEFD00003B81 /* IPFaceRectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */; };
 		BEB56F7D1EE7E65500003B81 /* IPShapePredictor.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEB56F7C1EE7E65500003B81 /* IPShapePredictor.mm */; };
+		BEDB7BA31F0A1A2000D5145E /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = BEDB7BA21F0A1A2000D5145E /* haarcascade_frontalface_alt2.xml */; };
 		BEDD9B971EE7F5BB006BB36D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDD9B961EE7F5BB006BB36D /* CoreFoundation.framework */; };
 		BEDD9B991EE7F97E006BB36D /* 26638112_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEDD9B981EE7F97E006BB36D /* 26638112_1.jpg */; };
 		BEF30E821EE7F10300472A72 /* IPFaceLandmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF30E811EE7F10300472A72 /* IPFaceLandmarks.m */; };
@@ -76,6 +77,8 @@
 		BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPFaceRectImageView.m; path = Formatter/IPFaceRectImageView.m; sourceTree = "<group>"; };
 		BEB56F7B1EE7E65500003B81 /* IPShapePredictor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPShapePredictor.h; path = lib/IPShapePredictor.h; sourceTree = "<group>"; };
 		BEB56F7C1EE7E65500003B81 /* IPShapePredictor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = IPShapePredictor.mm; path = lib/IPShapePredictor.mm; sourceTree = "<group>"; };
+		BEDB7BA11F0A158800D5145E /* OpenCVFaceDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVFaceDetector.h; sourceTree = "<group>"; };
+		BEDB7BA21F0A1A2000D5145E /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
 		BEDD9B961EE7F5BB006BB36D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		BEDD9B981EE7F97E006BB36D /* 26638112_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 26638112_1.jpg; sourceTree = "<group>"; };
 		BEF30E801EE7F10300472A72 /* IPFaceLandmarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPFaceLandmarks.h; path = lib/IPFaceLandmarks.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 		BEB56F3F1EE7D4D100003B81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEDB7BA21F0A1A2000D5145E /* haarcascade_frontalface_alt2.xml */,
+				BEDB7BA11F0A158800D5145E /* OpenCVFaceDetector.h */,
 				BEB56F401EE7D4D100003B81 /* main.m */,
 				BEB56F741EE7DEFD00003B81 /* IPFaceRectImageView.h */,
 				BEB56F751EE7DEFD00003B81 /* IPFaceRectImageView.m */,
@@ -311,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDB7BA31F0A1A2000D5145E /* haarcascade_frontalface_alt2.xml in Resources */,
 				BE8782B41EED179A003B901A /* FDFaceMasking.dat in Resources */,
 				BE8782B21EED09E3003B901A /* dlib in Resources */,
 				BEDD9B991EE7F97E006BB36D /* 26638112_1.jpg in Resources */,
@@ -493,10 +499,25 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = IPFaceAnnotationTools_OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -512,10 +533,25 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/lib";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = IPFaceAnnotationTools_OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ipvision.ca.IPFaceAnnotationTools-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

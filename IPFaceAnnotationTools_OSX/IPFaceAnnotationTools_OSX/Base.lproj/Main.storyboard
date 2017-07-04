@@ -788,9 +788,18 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                 </button>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf2-Io-Eag">
+                                                    <rect key="frame" x="775" y="1" width="4" height="15"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="lzb-pk-pal">
+                                                        <font key="font" size="12" name="STHeitiSC-Light"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OrV-Qi-Vtx" firstAttribute="leading" secondItem="pXc-Sn-Xwj" secondAttribute="trailing" constant="19" id="4rB-1l-sWZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="zf2-Io-Eag" secondAttribute="trailing" constant="17" id="6NC-fc-PHO"/>
                                                 <constraint firstItem="ENx-Kl-KSH" firstAttribute="leading" secondItem="Ve3-L3-3Uf" secondAttribute="leading" constant="17" id="8fG-Kd-8Qo"/>
                                                 <constraint firstItem="gaM-8x-lIb" firstAttribute="leading" secondItem="OrV-Qi-Vtx" secondAttribute="trailing" constant="24" id="9DJ-JW-YlX"/>
                                                 <constraint firstItem="ENx-Kl-KSH" firstAttribute="top" secondItem="Ve3-L3-3Uf" secondAttribute="top" constant="7" id="AF0-SU-1YC"/>
@@ -801,6 +810,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="pXc-Sn-Xwj" secondAttribute="bottom" constant="14" id="PsA-M9-Yr6"/>
                                                 <constraint firstItem="lJ1-a0-AuQ" firstAttribute="leading" secondItem="ENx-Kl-KSH" secondAttribute="trailing" constant="24" id="QqP-6N-kiT"/>
                                                 <constraint firstItem="pXc-Sn-Xwj" firstAttribute="leading" secondItem="Ve3-L3-3Uf" secondAttribute="leading" constant="17" id="R8A-yc-v0G"/>
+                                                <constraint firstAttribute="bottom" secondItem="zf2-Io-Eag" secondAttribute="bottom" constant="1" id="a8U-gP-F9d"/>
                                                 <constraint firstItem="BsA-Yu-8CJ" firstAttribute="centerY" secondItem="Ve3-L3-3Uf" secondAttribute="centerY" id="eK5-5G-Fsp"/>
                                                 <constraint firstItem="0r1-1M-7Mh" firstAttribute="leading" secondItem="gaM-8x-lIb" secondAttribute="trailing" constant="8" id="fU7-K0-hiz"/>
                                                 <constraint firstItem="LNf-T8-gBo" firstAttribute="leading" secondItem="0r1-1M-7Mh" secondAttribute="trailing" constant="20" id="i19-At-WO4"/>
@@ -906,6 +916,16 @@
                                                         <action selector="setMinFaceRect:" target="XfG-lQ-9wD" id="98v-nZ-XqA"/>
                                                     </connections>
                                                 </button>
+                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-1i-CiF">
+                                                    <rect key="frame" x="447" y="10" width="105" height="18"/>
+                                                    <buttonCell key="cell" type="check" title="CV Prediction" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ole-9D-9jr">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="toggoleOpenCVPrediction:" target="XfG-lQ-9wD" id="awG-BV-wN2"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="zx7-YR-VUQ" secondAttribute="bottom" constant="8" id="1gQ-1d-XIG"/>
@@ -914,8 +934,10 @@
                                                 <constraint firstItem="FnX-Un-lqK" firstAttribute="top" secondItem="0Zl-aM-ply" secondAttribute="top" constant="1" id="6jT-u9-XWR"/>
                                                 <constraint firstAttribute="bottom" secondItem="C7e-jZ-6ys" secondAttribute="bottom" constant="8" id="H3Y-Sd-Ac0"/>
                                                 <constraint firstAttribute="bottom" secondItem="wVf-eP-YOi" secondAttribute="bottom" constant="8" id="LCr-to-EFA"/>
+                                                <constraint firstItem="wVf-eP-YOi" firstAttribute="leading" secondItem="Hhx-1i-CiF" secondAttribute="trailing" constant="8" id="M7F-20-KmT"/>
                                                 <constraint firstAttribute="bottom" secondItem="TSt-mJ-CMC" secondAttribute="bottom" constant="8" id="PHa-j1-nMa"/>
                                                 <constraint firstAttribute="trailing" secondItem="eNQ-ue-L4S" secondAttribute="trailing" constant="17" id="Uhx-MJ-0wC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hhx-1i-CiF" secondAttribute="bottom" constant="12" id="VqS-6X-ugf"/>
                                                 <constraint firstItem="zx7-YR-VUQ" firstAttribute="leading" secondItem="wVf-eP-YOi" secondAttribute="trailing" constant="12" id="YAo-Ry-Ua2"/>
                                                 <constraint firstItem="C7e-jZ-6ys" firstAttribute="leading" secondItem="0Zl-aM-ply" secondAttribute="leading" constant="17" id="ZTn-AR-qOx"/>
                                                 <constraint firstAttribute="bottom" secondItem="1TK-vq-YLm" secondAttribute="bottom" constant="8" id="cgw-iq-Bmj"/>
@@ -951,6 +973,7 @@
                         <outlet property="clickPointLabel" destination="o0g-mf-VTZ" id="M6d-gr-yKo"/>
                         <outlet property="detailsImageView" destination="XeR-E1-oTc" id="JNr-lV-M2D"/>
                         <outlet property="lockCenterCheckbox" destination="BsA-Yu-8CJ" id="dwJ-h0-GVO"/>
+                        <outlet property="opencvStatusLabel" destination="zf2-Io-Eag" id="gFH-ez-WKF"/>
                         <outlet property="pixelTextField" destination="0r1-1M-7Mh" id="36p-5R-Brj"/>
                         <outlet property="rootDirectoryTextfield" destination="FnX-Un-lqK" id="y37-Wg-Zko"/>
                     </connections>

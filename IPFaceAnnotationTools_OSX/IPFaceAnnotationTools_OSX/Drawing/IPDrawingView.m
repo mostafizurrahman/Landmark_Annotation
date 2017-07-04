@@ -16,6 +16,21 @@
     // Drawing code here.
 }
 
+-(void)moveUp:(id)sender {
+    [self.clickedDelegate moveUp];
+}
+
+-(void)moveDown:(id)sender {
+    [self.clickedDelegate moveDown];
+}
+
+-(void)moveLeft:(id)sender {
+    [self.clickedDelegate moveLeft];
+}
+
+-(void)moveRight:(id)sender {
+    [self.clickedDelegate moveRight];
+}
 
 -(void)mouseDown:(NSEvent *)event {
     

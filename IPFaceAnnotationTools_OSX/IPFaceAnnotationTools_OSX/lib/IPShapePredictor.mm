@@ -18,7 +18,7 @@
     BOOL isDeserialized;
     unsigned char *imageBuffer;
     long numOfPixels;
-    NSMutableArray* currentShape;
+    
 }
 
 @end
@@ -30,12 +30,7 @@
     self = [super init];
     
     
-    currentShape = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 92; ++i) {
-        Landmarks* landmark = [[Landmarks alloc] init];
-        landmark.landmarkIndex = i;
-        [currentShape addObject:landmark];
-    }
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [self desirialize];
     });
@@ -52,26 +47,51 @@
 }
 
 
--(NSMutableArray *)predictShape:(NSImage *)sourceImage withFaceRect:(IPFaceRect *)faceRect{
+-(NSMutableArray *)predictShape:(NSImage *)sourceImage withFaceRect:(IPFaceRect *)faceRect isCV_detection:(BOOL)is_cv_detection{
     
     if(imageBuffer == NULL){
         
         [self allocateSourceImage:sourceImage];
     }
-    const dlib::rectangle oneFaceRect( faceRect.faceRect_OriginX,
-                                      faceRect.faceRect_OriginY,
-                                      faceRect.faceRect_Width + faceRect.faceRect_OriginX ,
-                                      faceRect.faceRect_OriginY + faceRect.faceRect_Height);
-    // predict shape
-    const dlib::full_object_detection shape = shapePredictor.predictShape(imageBuffer, faceRect.imageWidth, faceRect.imageHeight, oneFaceRect);
+    dlib::full_object_detection shape;
+    if(is_cv_detection){
+        const dlib::rectangle oneFaceRect( faceRect.imageWidth - faceRect.cv_faceRect_OriginX - faceRect.cv_faceRect_Width,
+                                          faceRect.cv_faceRect_OriginY,
+                                          faceRect.imageWidth - faceRect.cv_faceRect_OriginX ,
+                                          faceRect.cv_faceRect_OriginY + faceRect.cv_faceRect_Height);
+        
+       
+        
+        shape = shapePredictor.predictShape(imageBuffer, faceRect.imageWidth, faceRect.imageHeight, oneFaceRect);
+        
+    } else {
+        const dlib::rectangle oneFaceRect( faceRect.imageWidth - faceRect.faceRect_OriginX - faceRect.faceRect_Width,
+                                          faceRect.faceRect_OriginY,
+                                          faceRect.imageWidth - faceRect.faceRect_OriginX ,
+                                          faceRect.faceRect_OriginY + faceRect.faceRect_Height);
+        
+        
+        
+        shape = shapePredictor.predictShape(imageBuffer, faceRect.imageWidth, faceRect.imageHeight, oneFaceRect);
+    }
     
+    
+    //    const dlib::rectangle oneFaceRect( faceRect.faceRect_OriginX,
+    //                                      faceRect.faceRect_OriginY,
+    //                                      faceRect.faceRect_Width + faceRect.faceRect_OriginX ,
+    //                                      faceRect.faceRect_OriginY + faceRect.faceRect_Height);
+    // predict shape
     // update current shape
+    
+    NSMutableArray* currentShape = [[NSMutableArray alloc] init];    
     for(int i = 0; i< shape.num_parts(); i++) {
+        Landmarks* landmark = [[Landmarks alloc] init];
+        landmark.landmarkIndex = i;
         const dlib::point p = shape.part(i);
-        Landmarks* landmark = [currentShape objectAtIndex:i];
         // vertices X axis is from right to left but dlib returns point with X axis from left to right. So mirrored x coordinate
         landmark.xCoodinate = faceRect.imageWidth - p.x();
         landmark.yCoodinate = p.y();
+        [currentShape addObject:landmark];
     }
     return currentShape;
 }
